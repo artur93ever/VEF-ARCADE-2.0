@@ -31,7 +31,7 @@ public class DestroySpawn : MonoBehaviour
     private static int destroyCount = 0;
     private static int conesCount = 0;
 
-    private BoxCollider boxCollider;
+    private SphereCollider boxCollider;
 
     private void Start()
     {
@@ -47,7 +47,7 @@ public class DestroySpawn : MonoBehaviour
         attractor.enabled = false;
 
         playerCubeEnabled = GetComponent<PlayerCubeEnabledAttractor>();
-        boxCollider = GetComponent<BoxCollider>();
+        boxCollider = GetComponent<SphereCollider>();
     }
 
     private void Update()

@@ -6,6 +6,7 @@ public class GravityCenter_animationFinished : MonoBehaviour
 {
     public GameObject torusTutorial;
     public GameObject torusLevel;
+    public Animator handAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -28,5 +29,10 @@ public class GravityCenter_animationFinished : MonoBehaviour
     public void OnAnimationFinished_Active2()
     {
         torusLevel.SetActive(true);
+    }
+
+    public void TriggerAnimation()
+    {
+        handAnimator.SetTrigger("coneThrow");
     }
 }
