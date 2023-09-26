@@ -176,7 +176,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 5
-    functionName: OnAnimationFinished_Active
+    functionName: GravityActive
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

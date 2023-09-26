@@ -14,14 +14,14 @@ GameObject:
   - component: {fileID: 8745383295863127686}
   - component: {fileID: 8745383295863127681}
   - component: {fileID: 8745383295863127680}
-  - component: {fileID: 8745383295863127687}
+  - component: {fileID: 6110479183005914750}
   m_Layer: 0
   m_Name: TorusTutorial
   m_TagString: TorusParentTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9139895708415105385
 Transform:
   m_ObjectHideFlags: 0
@@ -156,7 +156,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8745383295863127687
+--- !u!114 &6110479183005914750
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,8 +165,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8474857592492082131}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14b0d0826134a8b4ebc93fcac31baed3, type: 3}
+  m_Script: {fileID: 11500000, guid: ef5d86b3eee14a24289bda66475deed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torusTutorial: {fileID: 0}
-  torusLevel: {fileID: 0}
+  torusParent: {fileID: 0}
+  handAnimator: {fileID: 0}
