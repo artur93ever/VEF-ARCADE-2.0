@@ -16,13 +16,14 @@ GameObject:
   - component: {fileID: 5348299743543137095}
   - component: {fileID: 624951412095538424}
   - component: {fileID: 3878193901224183755}
+  - component: {fileID: 9099198458561195566}
   m_Layer: 6
   m_Name: PlayerCone
   m_TagString: PlayerCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &624951412095538421
 Transform:
   m_ObjectHideFlags: 0
@@ -283,6 +284,7 @@ MonoBehaviour:
   tutorialAttractor: {fileID: 2008438316107892408, guid: 0b8097f2e0acd674d9699c44de5fe293,
     type: 3}
   attractor: {fileID: 0}
+  handAnimator: {fileID: 0}
   torusTutorialAnimator: {fileID: 0}
   scoreSystem: {fileID: 0}
   triesToNewSpawn: 2
@@ -300,6 +302,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   centerCube: {fileID: 0}
   torusCollider: {fileID: 0}
+--- !u!114 &9099198458561195566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624951412095538379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bff62bf8bc3fa540a0ffedbe4817121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hapticOnActivated:
+    intensity: 0
+    duration: 0
+  hapticHoverEntered:
+    intensity: 0
+    duration: 0
+  hapticHoverExited:
+    intensity: 0
+    duration: 0
+  hapticSelectEntered:
+    intensity: 1
+    duration: 0.3
+  hapticSelectExit:
+    intensity: 0.5
+    duration: 0.2
 --- !u!1 &1121557369426206487
 GameObject:
   m_ObjectHideFlags: 0

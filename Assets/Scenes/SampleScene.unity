@@ -2260,7 +2260,7 @@ Transform:
   m_GameObject: {fileID: 411355183}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.5584674, y: 3.1852078, z: -0.71225584}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2666,11 +2666,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCone
       objectReference: {fileID: 0}
-    - target: {fileID: 624951412095538379, guid: 1f9379e4316c25648869277a32664374,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 624951412095538421, guid: 1f9379e4316c25648869277a32664374,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2733,6 +2728,11 @@ PrefabInstance:
       objectReference: {fileID: 1738261128}
     - target: {fileID: 624951412095538424, guid: 1f9379e4316c25648869277a32664374,
         type: 3}
+      propertyPath: handAnimator
+      value: 
+      objectReference: {fileID: 1243297835}
+    - target: {fileID: 624951412095538424, guid: 1f9379e4316c25648869277a32664374,
+        type: 3}
       propertyPath: spawnerCube1
       value: 
       objectReference: {fileID: 1560452088}
@@ -2759,11 +2759,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 624951412095538379, guid: 1f9379e4316c25648869277a32664374,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 514704026}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f9379e4316c25648869277a32664374, type: 3}
 --- !u!1 &514704016 stripped
 GameObject:
@@ -2771,33 +2767,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 514704015}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &514704026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 514704016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bff62bf8bc3fa540a0ffedbe4817121, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hapticOnActivated:
-    intensity: 0
-    duration: 0
-  hapticHoverEntered:
-    intensity: 0
-    duration: 0
-  hapticHoverExited:
-    intensity: 0
-    duration: 0
-  hapticSelectEntered:
-    intensity: 1
-    duration: 0.3
-  hapticSelectExit:
-    intensity: 0.5
-    duration: 0.2
 --- !u!1 &548888744
 GameObject:
   m_ObjectHideFlags: 0
@@ -5340,6 +5309,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TorusTutorial
       objectReference: {fileID: 0}
+    - target: {fileID: 8474857592492082131, guid: dfc53c3855b0a2c45bf1d7e1b4c02873,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9139895708415105385, guid: dfc53c3855b0a2c45bf1d7e1b4c02873,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7302,7 +7276,7 @@ Transform:
   m_GameObject: {fileID: 1154899977}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.439}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

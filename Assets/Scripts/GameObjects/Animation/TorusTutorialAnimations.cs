@@ -9,7 +9,7 @@ public class TorusTutorialAnimations : MonoBehaviour
 
     public void TriggerAnimation()
     {
-        handAnimator.SetTrigger("coneThrow");
+        handAnimator.Play("hand-coneThrow");
     }
 
     public void TorusParentActive()

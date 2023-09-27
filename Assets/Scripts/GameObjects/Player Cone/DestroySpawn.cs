@@ -15,6 +15,9 @@ public class DestroySpawn : MonoBehaviour
     public GameObject tutorialAttractor;
     public Attractor attractor;
 
+    [Header("HandAnimator")]
+    public Animator handAnimator;
+
     [Header("Other Settings")]
     public Animator torusTutorialAnimator;
     public ScoreSystem scoreSystem;
@@ -78,6 +81,16 @@ public class DestroySpawn : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         Vector3 spawnPosition = hasCenterSpawned ? spawnerCube2.transform.position : spawnerCube1.transform.position;
+        if(hasCenterSpawned == false)
+        {
+            handAnimator.Play("hand-coneThrow");
+        }
+        else
+        {
+            handAnimator.Play("hand-coneCenterTransition");
+        }
+
+        yield return new WaitForSeconds(2);
         Instantiate(cubePrefab, spawnPosition, Quaternion.identity);
         Destroy(gameObject);
     }
