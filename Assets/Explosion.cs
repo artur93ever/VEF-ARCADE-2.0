@@ -4,30 +4,36 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
-    public GameObject parentObject;
+    public GameObject explosionPrefab;
+    public float explosionForce = 10f;
 
-    void OnCollisionEnter(Collision collision)
+    private void Start()
     {
-        if (collision.gameObject.CompareTag("Explodable"))
+        // Schedule the destruction of the GameObject after 10 seconds
+        Invoke("DestroyGameObject", 10f);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
         {
-            foreach (Transform child in parentObject.transform)
-            {
-                child.gameObject.SetActive(true);
-            }
-
-            MeshRenderer renderer = parentObject.GetComponent<MeshRenderer>();
-            if (renderer != null)
-            {
-                renderer.enabled = false; // Disable the MeshRenderer
-            }
-
-            StartCoroutine(DestroyCube());
+            Explode();
         }
     }
 
-    IEnumerator DestroyCube()
+    void Explode()
     {
-        yield return new WaitForSeconds(3);
-        Destroy(parentObject);
+        GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        foreach (Transform child in explosion.transform)
+        {
+            Rigidbody rb = child.GetComponent<Rigidbody>();
+            rb.AddExplosionForce(explosionForce, explosion.transform.position, 1.0f);
+        }
+        DestroyGameObject();
+    }
+
+    void DestroyGameObject()
+    {
+        Destroy(gameObject);
     }
 }
