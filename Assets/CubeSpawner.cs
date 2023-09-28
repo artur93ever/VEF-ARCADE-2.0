@@ -1,12 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CubeSpawner : MonoBehaviour
 {
-    public GameObject cubePrefab; // Assign your cube prefab in the Inspector
-    public float spawnInterval = 1.0f; // Adjust this to control the spawn rate
-    public float launchForce = 10.0f; // Adjust this to control the launch force
+    public GameObject cubePrefab;
+    public GameObject targetObject;
+    public float minSpawnInterval = 3.0f; // Minimum spawn interval
+    public float maxSpawnInterval = 6.0f; // Maximum spawn interval
+    public float launchForce = 10.0f;
+    public Color changeColor = Color.red;
 
     private void Start()
     {
@@ -17,19 +21,27 @@ public class CubeSpawner : MonoBehaviour
     {
         while (true)
         {
+            float spawnInterval = UnityEngine.Random.Range(minSpawnInterval, maxSpawnInterval); // Generate random spawn interval
+            yield return new WaitForSeconds(spawnInterval);
+
+            Renderer renderer = targetObject.GetComponent<Renderer>();
+
+            if (renderer != null)
+            {
+                renderer.material.color = changeColor;
+
+                yield return new WaitForSeconds(0.3f);
+
+                renderer.material.color = Color.white;
+            }
+
             GameObject cube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
             Rigidbody rb = cube.GetComponent<Rigidbody>();
             if (rb != null)
             {
-                // Invert the direction to make it move away from the player
                 Vector3 launchDirection = (Camera.main.transform.position - transform.position).normalized;
-
-                // Apply the force with the inverted direction
                 rb.AddForce(launchDirection * launchForce, ForceMode.Impulse);
             }
-
-            yield return new WaitForSeconds(spawnInterval);
         }
     }
-
 }

@@ -10,7 +10,7 @@ public class Explosion : MonoBehaviour
     private void Start()
     {
         // Schedule the destruction of the GameObject after 10 seconds
-        Invoke("DestroyGameObject", 10f);
+        Invoke("DestroyGameObject", 3f);
     }
 
     private void OnCollisionEnter(Collision collision)
