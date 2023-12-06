@@ -111,7 +111,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 0}
-  torusParent1: {fileID: 0}
+  torusParent1: {fileID: 6275934223970678988, guid: ee5d1f60b3a0a924d84391a1bb4a237b,
+    type: 3}
   torusParent2: {fileID: 9192302895511020306, guid: f63f9790ff2b72c4aa4989485bb84088,
     type: 3}
   torus1Destroy: 0
@@ -129,6 +130,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wristUI: {fileID: 0}
   activeWristUI: 1
-  rayInteractor: {fileID: 0}
   destroySpawn: {fileID: 624951412095538424, guid: 1f9379e4316c25648869277a32664374,
     type: 3}
