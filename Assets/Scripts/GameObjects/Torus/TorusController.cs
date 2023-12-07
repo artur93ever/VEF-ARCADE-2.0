@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class TorusController : MonoBehaviour
 {
-    public GameObject[] torusArray = new GameObject[5];
-    private bool[] torusActivated = new bool[5]; // Track which torus objects are activated
+    public GameObject[] torusArray = new GameObject[7];
+    private bool[] torusActivated = new bool[7]; // Track which torus objects are activated
     private int activeTorusIndex = 0;
 
     public Animator centerCubeAnimator;
