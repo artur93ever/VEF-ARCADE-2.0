@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject wristUI;
 
     public bool activeWristUI;
+    public InputActionProperty menuButton;
 
     //public XRRayInteractor rayInteractor;
 
@@ -23,6 +24,14 @@ public class PauseMenu : MonoBehaviour
         DisplayWristUI();
     }
 
+    void Update()
+    {
+        if (menuButton.action.WasPressedThisFrame())
+        {
+            wristUI.SetActive(!wristUI.activeSelf);
+        }
+    }
+
     public void PauseButtonPress(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -30,6 +39,8 @@ public class PauseMenu : MonoBehaviour
             DisplayWristUI();
         }
     }
+
+
 
     public void DisplayWristUI()
     {
