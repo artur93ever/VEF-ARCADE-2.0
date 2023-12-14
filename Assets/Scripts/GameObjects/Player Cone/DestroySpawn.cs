@@ -110,6 +110,7 @@ public class DestroySpawn : MonoBehaviour
     {
         UnityEngine.Debug.Log("Released");
         boxCollider.enabled = true;
+        StartCoroutine(DestroyCubeWithDelay(5f));
     }
 
     private void SpawnStartAttractor()

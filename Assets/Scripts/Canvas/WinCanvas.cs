@@ -9,6 +9,8 @@ public class WinCanvas : MonoBehaviour
     //public XRRayInteractor rayInteractor;
     public ScoreSystem scoreSystem; // Add this line
 
+    public GameObject restartButton;
+
     void Start()
     {
         //rayInteractor.enabled = false;
@@ -22,6 +24,8 @@ public class WinCanvas : MonoBehaviour
             //rayInteractor.enabled = true;
 
             scoreSystem.countingAllowed = false; // Disable counting
+
+            restartButton.SetActive(true);
         }
     }
 }
