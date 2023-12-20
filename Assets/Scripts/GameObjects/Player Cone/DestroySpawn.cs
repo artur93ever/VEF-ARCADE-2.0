@@ -31,6 +31,8 @@ public class DestroySpawn : MonoBehaviour
     private GameObject newAttractor;
     private PlayerCubeEnabledAttractor playerCubeEnabled;
 
+    public GameObject particles;
+
     private static int destroyCount = 0;
     private static int conesCount = 0;
 
@@ -51,6 +53,8 @@ public class DestroySpawn : MonoBehaviour
 
         playerCubeEnabled = GetComponent<PlayerCubeEnabledAttractor>();
         boxCollider = GetComponent<SphereCollider>();
+
+        particles.SetActive(false);
     }
 
     private void Update()
@@ -69,6 +73,7 @@ public class DestroySpawn : MonoBehaviour
             UnityEngine.Debug.Log(" Attractor HIT");
             destroyCount++;
             coneMesh.SetActive(false);
+            particles.SetActive(true);
 
             scoreSystem.UpdateScore(conesCount);
 
